@@ -1,0 +1,159 @@
+@import "./Variables.css";
+.container {
+  width: 40rem;
+}
+
+.row {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.input-field,
+.input-field-inline {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.input-field-inline {
+  display: inline-block;
+}
+
+.input-field > input,
+.input-field-inline > input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-field > select,
+.input-field-inline > select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.half {
+  width: 50%;
+}
+
+.tenth {
+  width: 10%;
+}
+
+.thirty {
+  width: 30%;
+}
+
+.error-msg-shown {
+  visibility: visible;
+  color: red;
+}
+
+.error-msg-hidden {
+  visibility: hidden;
+  color: red;
+}
+
+.dash::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 5px;
+  background-color: black;
+  top: 1.05rem;
+  left: -0.1rem;
+  box-sizing: border-box;
+}
+
+.react-form {
+  display: flex;
+  /* align-items: center;  */
+  flex-direction: column;
+  width: 35rem;
+}
+
+input,
+select {
+  padding: 0.5rem;
+}
+
+.first-row-elements-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  height: 3rem;
+}
+
+.firstName-container {
+  width: 50%;
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.selects-and-digits-container {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.four-digits-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  /* height: 1rem; */
+}
+
+.toggle-icon-container {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  cursor: pointer;
+}
+
+.password {
+  /* width: 35rem; */
+}
+.error-message {
+  color: red;
+  font-size: medium;
+}
+
+.select-number-container::before,
+.select-letter-container::before,
+.four-digits-container::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 5px;
+  background-color: black;
+  top: 1.5rem;
+
+  box-sizing: border-box;
+}
+@media all and (max-width: 600px) {
+  .first-row-elements-container {
+    flex-direction: column;
+  }
+  .firstName-container {
+    padding-bottom: 0.5rem;
+  }
+  .selects-and-digits-container {
+    flex-direction: row;
+  }
+  .password-container {
+    margin-top: 3.5rem;
+    width: 50%;
+  }
+  .password {
+    width: 100%;
+  }
+  .toggle-icon-container {
+    top: 10px;
+  }
+}

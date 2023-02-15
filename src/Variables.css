@@ -1,0 +1,13 @@
+:root {
+  --default-margin: 0.5rem;
+  --big-margin: 1rem;
+  --default-padding: 0.5rem;
+  --big-padding: 1rem;
+  --full-width: 100%;
+  --half-width: 50%;
+  --alert-color: red;
+  --default-black-color: black;
+  --margin-error-message: 0.1rem;
+  --elements-default-height: 2.5rem;
+  --small-screen-default-height: 3rem;
+}

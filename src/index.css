@@ -1,0 +1,242 @@
+@import "./Variables.css";
+/* body {
+  background-color: darkgrey;
+} */
+.react-form {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input,
+select {
+  border-color: lightgray;
+  border-width: thin;
+  border-style: solid;
+  border-radius: 3px;
+}
+.first-row-elements-container {
+  display: flex;
+  flex-direction: row;
+  margin: var(--default-margin);
+  height: var(--elements-default-height);
+}
+.firstName-container {
+  display: flex;
+  flex-direction: column;
+  /* width: var(--half-width); */
+  width: 60%;
+}
+
+.selects-and-digits-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.select-number-container::before,
+.select-letter-container::before,
+.four-digits-container::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 0.3rem;
+  background-color: dimgray;
+  top: 1.05rem;
+  left: -10px;
+  box-sizing: border-box;
+}
+
+.select-number-container,
+.select-letter-container,
+.four-digits-container {
+  position: relative;
+}
+
+.select-number-container {
+  margin-left: var(--big-margin);
+  margin-right: var(--big-margin);
+}
+.select-letter-container {
+  margin-right: var(--big-margin);
+}
+
+.last-four-digits {
+  width: 85%;
+}
+
+input,
+select,
+button {
+  padding: var(--default-padding);
+}
+.password-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: var(--default-margin);
+  height: var(--elements-default-height);
+}
+
+.toggle-icon-container {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.submit-btn-container {
+  margin: var(--default-margin);
+}
+
+.submit-btn {
+  background-color: var(--default-black-color);
+  color: white;
+  border-radius: 3px;
+  border-color: var(--default-black-color);
+  width: 30%;
+}
+
+.submit-btn:focus {
+  border-color: darkgrey;
+}
+
+.last-four-digits-invalid {
+  width: 85%;
+  border-color: var(--alert-color);
+  color: var(--alert-color);
+  box-shadow: 0 0 3px var(--alert-color);
+}
+.loading {
+  text-align: center;
+  font-size: xx-large;
+}
+
+@media all and (max-width: 590px) {
+  .container {
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 50%);
+    width: 90%;
+  }
+  .first-row-elements-container {
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .firstName-container {
+    width: var(--full-width);
+    height: var(--small-screen-default-height);
+  }
+  .select-number-container {
+    margin-left: 0;
+    width: var(--half-width);
+  }
+  .select-letter-container {
+    width: var(--half-width);
+  }
+
+  .select-letter,
+  .select-number {
+    width: var(--full-width);
+  }
+
+  .select-number-container::before {
+    display: none;
+  }
+
+  .selects-and-digits-container {
+    margin-top: var(--big-margin);
+    height: var(--small-screen-default-height);
+  }
+  .last-four-digits,
+  .last-four-digits-invalid {
+    /* width: auto; */
+  }
+
+  .password-container,
+  .submit-btn-container {
+    height: var(--small-screen-default-height);
+  }
+  .submit-btn {
+    width: var(--full-width);
+  }
+
+  .toggle-icon-container {
+    right: 5px;
+    top: 9px;
+  }
+}
+
+.error-message {
+  color: var(--alert-color);
+  font-size: small;
+  margin-top: var(--margin-error-message);
+  margin-left: var(--margin-error-message);
+}
+.input-invalid {
+  color: var(--alert-color);
+  border-color: var(--alert-color);
+  box-shadow: 0 0 3px var(--alert-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input:focus,
+select:focus {
+  outline: none !important;
+  border-color: lightskyblue;
+  box-shadow: 0 0 5px lightskyblue;
+}
+.companions {
+  text-align: center;
+}
+
+.companion-names {
+  padding: var(--big-padding);
+  font-size: large;
+}
+.logout {
+  margin: var(--big-margin);
+}
+input[type="file"] {
+  display: none;
+}
+.photo-button {
+  border: none;
+  margin: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e1a1ff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  color: white;
+}
+
+.photos-page {
+  display: flex;
+  justify-content: center;
+}
+
+.uploadIcon {
+  margin-left: 0.5rem;
+}
+.img-preview {
+  width: 20rem;
+  height: 20rem;
+}
